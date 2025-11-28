@@ -6,7 +6,7 @@ This repository contains the software pipeline for motion control, autofocus, oo
 [> **A self-driving microscopy system for intelligent in vitro imaging of oocyte maturation**](files\Manuscript.docx)
 
 ---
-![](files\img1.png)
+![](files/img1.png)
 
 ## 📌 Overview
 
@@ -110,7 +110,7 @@ It is fully modular and can be extended to stem cells, cancer cells, or drug-res
 - Autofocus
     - Automatically adjusts Z-axis to maximize sharpness of oocyte images in real time.
 
-![](files\img4.png)
+![](files/img4.png)
 
 - Oocyte Detection
     - Real-time bounding box localization with >99% accuracy.
@@ -118,12 +118,12 @@ It is fully modular and can be extended to stem cells, cancer cells, or drug-res
 - Cumulus Segmentation
     - Used to quantify expansion dynamics.
 
-![](files\img3.png)
+![](files/img3.png)
 
 - Time-Lapse Charts
     - Plots oocyte area vs. time and cumulus expansion.
 
-![](files\img5.png)
+![](files/img5.png)
 
 
 --- 
