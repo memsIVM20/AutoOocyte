@@ -31,7 +31,7 @@ It is fully modular and can be extended to stem cells, cancer cells, or drug-res
 
 ## 🧬 Key Features
 
-![](files\img2.png)
+![](files/img2.png)
 
 ### 🕹 1. Automated Motion Control (3-DOF)
 - X-axis: culture dish movement  
