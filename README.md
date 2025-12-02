@@ -11,11 +11,6 @@ This repository contains the software pipeline for motion control, autofocus, oo
 
 - [📌 Overview](#-overview)
 - [🧬 Key Features](#-key-features)
-  - [🕹 1. Automated Motion Control (3-DOF)](#1-automated-motion-control-3-dof)
-  - [🔍 2. Intelligent Autofocus (Tenengrad Gradient)](#2-intelligent-autofocus-tenengrad-gradient)
-  - [🧠 3. YOLOv8 Object Detection](#3-yolov8-object-detection)
-  - [🎯 4. Cumulus–Oocyte Segmentation](#4-cumulus–oocyte-segmentation)
-  - [⏱ 5. Long-Term Time-Lapse Monitoring](#5-long-term-time-lapse-monitoring)
 - [📁 Repository Structure](#-repository-structure)
 - [🔑 Main Software Functions](#-main-software-functions)
 - [🔄 Processing Pipeline](#-processing-pipeline)
