@@ -9,16 +9,16 @@ This repository contains the software pipeline for motion control, autofocus, oo
 ---
 ## 📑 Table of Contents
 
-- [📌 Overview](#-overview)
-- [🧬 Key Features](#-key-features)
-- [📁 Repository Structure](#-repository-structure)
-- [🔑 Main Software Functions](#-main-software-functions)
-- [🔄 Processing Pipeline](#-processing-pipeline)
-- [🔬 Example Outputs](#-example-outputs)
-- [📦 Hardware Used](#-hardware-used)
-- [🤝 Acknowledgments](#-acknowledgments)
-- [🧩 Future Work](#-future-work)
-- [💬 Contact](#-contact)
+[📌 Overview](#-overview)  
+[🧬 Key Features](#-key-features)  
+[📁 Repository Structure](#-repository-structure)  
+[🔑 Main Software Functions](#-main-software-functions)  
+[🔄 Processing Pipeline](#-processing-pipeline)  
+[🔬 Example Outputs](#-example-outputs)  
+[📦 Hardware Used](#-hardware-used)  
+[🤝 Acknowledgments](#-acknowledgments)  
+[🧩 Future Work](#-future-work)  
+[💬 Contact](#-contact)  
 
 
 ## 📌 Overview
