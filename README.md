@@ -1,12 +1,30 @@
 # 🧫 Self-Driving Microscopy System for Intelligent In-Vitro Imaging of Oocyte Maturation
 
 A fully automated, AI-driven time-lapse microscopy system designed to monitor **oocyte maturation** inside **standard culture dishes** — without requiring customized microwell plates.  
-This repository contains the software pipeline for motion control, autofocus, oocyte detection, segmentation, and time-lapse data management as described in the paper:
-
-[> **A self-driving microscopy system for intelligent in vitro imaging of oocyte maturation**](files\Manuscript.docx)
+This repository contains the software pipeline for motion control, autofocus, oocyte detection, segmentation, and time-lapse data management.
 
 ---
 ![](files/img1.png)
+
+---
+## 📑 Table of Contents
+
+- [📌 Overview](#-overview)
+- [🧬 Key Features](#-key-features)
+  - [🕹 1. Automated Motion Control (3-DOF)](#1-automated-motion-control-3-dof)
+  - [🔍 2. Intelligent Autofocus (Tenengrad Gradient)](#2-intelligent-autofocus-tenengrad-gradient)
+  - [🧠 3. YOLOv8 Object Detection](#3-yolov8-object-detection)
+  - [🎯 4. Cumulus–Oocyte Segmentation](#4-cumulus–oocyte-segmentation)
+  - [⏱ 5. Long-Term Time-Lapse Monitoring](#5-long-term-time-lapse-monitoring)
+- [📁 Repository Structure](#-repository-structure)
+- [🔑 Main Software Functions](#-main-software-functions)
+- [🔄 Processing Pipeline](#-processing-pipeline)
+- [🔬 Example Outputs](#-example-outputs)
+- [📦 Hardware Used](#-hardware-used)
+- [🤝 Acknowledgments](#-acknowledgments)
+- [🧩 Future Work](#-future-work)
+- [💬 Contact](#-contact)
+
 
 ## 📌 Overview
 
@@ -31,7 +49,6 @@ It is fully modular and can be extended to stem cells, cancer cells, or drug-res
 
 ## 🧬 Key Features
 
-![](files/img2.png)
 
 ### 🕹 1. Automated Motion Control (3-DOF)
 - X-axis: culture dish movement  
@@ -92,16 +109,42 @@ It is fully modular and can be extended to stem cells, cancer cells, or drug-res
 ## 📁 Repository Structure
 
 ```
-├── backend/
+├── files                        # Illustrations
+├── program/
 |   ├── camera_utilities/        # Image capture, streaming utilities
 │   ├── data/                    # Stored datasets, logging, or exported results
 │   ├── detect_main/             # Main detection pipeline (object/egg detection workflow)
 │   ├── plc_communication/       # Communication module with PLC (motion control, I/O commands)
 │   ├── saved_images/            # Temporary and processed images saved during operation
 │   └── segmentation/            # Segmentation models, processing scripts, and post-processing tools
-├── files                        # Illustrations and paper
 └── README.md
 ```
+
+---
+
+## 🔑 Main Software Functions
+
+| Function | Purpose |
+|---------|---------|
+| `detectWellEdge()` |  Scan X-axis to locate well edge. |
+| `focusWellEdge()` |  Capture Z-stack to find best focus at well edge. |
+| `findCenter()` |  Estimate well center from detected boundaries |
+| `detectOocyte()` |  Spiral scan to detect oocyte location. |
+| `focusOocyte()` |  Autofocus on detected oocyte for optimal clarity. |
+
+---
+
+## 🔄 Processing Pipeline
+
+![Detection program pipeline](files/img2.png)
+
+1️⃣ Move camera to search boundary of well  
+2️⃣ Perform autofocus → select best Z height  
+3️⃣ Localize well center  
+4️⃣ Generate spiral search path  
+5️⃣ Capture images at each point  
+6️⃣ YOLOv8 detects oocytes → extract coordinates  
+7️⃣ Save images and logs to output folders  
 
 ---
 
@@ -140,11 +183,6 @@ Chamber Environment           38.5 °C, 5% CO₂, 5–7% O₂
 ```
 ---
 
-## 📚 Citation
-
-If you use this system or code, please cite:
-A self-driving microscopy system for intelligent in vitro imaging of oocyte maturation.
-
 ## 🤝 Acknowledgments
 
 This work was funded by Vingroup Innovation Foundation (VINIF)
@@ -156,6 +194,10 @@ Project code: VINIF.2022.DA00030
 - Support for stem cells, cancer cells, organoids
 - Integration with cloud-based dashboards
 
+## 📝 License
+Distributed under the MIT License.  
+See [LICENSE](LICENSE) for more information.
+
 ## 💬 Contact
-Your Lab / Your Name
-Email: your.email@example.com
+Project manager: Phan Hoang Anh  
+Email: anh.ph@vnu.edu.vn
